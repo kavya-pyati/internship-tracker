@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Internship Tracker</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Internship Application Tracker</h1>
+
+<a class="btn" href="/add">+ Add Application</a>
+
+<table>
+<tr>
+<th>Company</th>
+<th>Status</th>
+<th>Notes</th>
+</tr>
+
+{% for app in applications %}
+<tr>
+<td>{{app[1]}}</td>
+<td>
+<span class="status {{app[2]}}">{{app[2]}}</span>
+</td>
+<td>{{app[3]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</body>
+</html>

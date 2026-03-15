@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Application</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Add Internship Application</h2>
+
+<form method="POST">
+
+<label>Company Name</label>
+<input type="text" name="company" required>
+
+<label>Status</label>
+<select name="status">
+<option>Applied</option>
+<option>Interview</option>
+<option>Rejected</option>
+</select>
+
+<label>Notes</label>
+<textarea name="notes"></textarea>
+
+<button type="submit">Save Application</button>
+
+</form>
+
+<a class="back" href="/">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
